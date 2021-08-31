@@ -247,3 +247,59 @@
 // getSubstring("Hello world", 8);
 // getSubstring("Hello world", 11);
 // getSubstring("Hello world", 0);
+//
+// function formatMessage(message, maxLength) {
+//   let result;
+//   if (message.length <= maxLength) {
+//     result = message;
+//   } else {
+//     result = message.slice(0, maxLength) + "...";
+//   }
+//   console.log(result);
+//   return result;
+// }
+// formatMessage("Curabitur ligula sapien", 23);
+// formatMessage("Vestibulum facilisis purus nec", 20);
+// formatMessage("Vestibulum facilisis purus nec", 30);
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);
+//
+// function normalizeInput(input) {
+//   const normalizedInput = input.toLowerCase();
+//   console.log(normalizedInput);
+//   return normalizedInput;
+// }
+// normalizeInput("Hello world");
+// normalizeInput("This ISN'T SpaM");
+// normalizeInput("Big SALE");
+//
+// function checkForName(fullName, name) {
+//   const result = fullName.includes(name);
+//   console.log(result);
+//   return result;
+// }
+// checkForName("Egor Kolbasov", "egor");
+// checkForName("Egor Kolbasov", "egOr");
+// checkForName("Egor Kolbasov", "Zhenya");
+// checkForName("Vadim Nekrasov", "Vadim");
+// checkForName("Vadim Nekrasov", "vadim");
+// checkForName("Vadim Nekrasov", "Dima");
+//
+function checkForSpam(message) {
+  let result;
+  message = message.toLowerCase();
+  if (message.includes("spam") || message.includes("sale")) {
+    result = true;
+  } else {
+    result = false;
+  }
+  console.log(result);
+  return result;
+}
+checkForSpam("Latest technology news");
+checkForSpam("Get best sale offers now!");
+checkForSpam("JavaScript weekly newsletter");
+checkForSpam("Amazing SalE, only tonight!");
+checkForSpam("Trust me, this is not a spam message");
+checkForSpam("Get rid of sPaM emails. Our book in on sale!");
+checkForSpam("Get rid of sPaM emails. Our book in on sale!");
